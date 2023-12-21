@@ -158,7 +158,7 @@ T max(const T& a, const U& b) {
 }  // namespace jc
 
 int main() {
-  assert(jc::max(1, 3.14) == 3);  // T 推断为 int，返回值截断为 int
+  assert(jc::max<int>(1, 3.14) == 3);  // T 推断为 int，返回值截断为 int
   assert(jc::max<double>(1, 3.14) == 3.14);
 }
 ```
